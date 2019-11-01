@@ -13,7 +13,7 @@ DETAILS
 
 It's a very simple interpreter built with the objective of minimizing the compiled file size.
 The only error catching it does is spotting an unbalanced number of while begin and while end
-commands and telling you if the textfile you wanted to run cant be opened (the ability to run
+tokens and telling you if the textfile you wanted to run cant be opened (the ability to run
 off the edge of memory is considered a feature). All characters other than brainfuck commands 
 are considered as comments. It supports up to 10Kb programs and has a 10Kb memory space (the
 ability to increase memory space by running over and into program memory is considered a feature).
@@ -34,6 +34,10 @@ you have a chunk of memory initialized to 0 and a pointer that starts at 0
 
 "," - read stdin into the location of pointer
 
-"[" - begin while on condition of byte at pointer being greater than 0
+"[" - begin while loop on condition of byte at pointer being greater than 0, else skip past to next end of while token
 
-"]" - end while\n
+"]" - end while, looping back to connecting begin of while
+
+KNOWN POSSIBLE BUGS
+
+nested whiles will likely get a bit funky
