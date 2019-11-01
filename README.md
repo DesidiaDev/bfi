@@ -6,6 +6,7 @@ USE
 To compile, simple run the makefile.
 
 run with "./bfi TEXTFILE" to run a brainfuck program from a text file
+
 run with "./bfi" for it to read from STDIN
 
 DETAILS
